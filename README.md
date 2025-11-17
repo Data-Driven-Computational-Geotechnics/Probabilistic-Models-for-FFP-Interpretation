@@ -121,7 +121,7 @@ All notebooks expect an input dataset in Excel format (e.g. `FFP_Data.xlsx`) con
 
 A typical structure is:
 
-- **Columns 1…(n-1)**: input features (e.g. FFP impact / deceleration / depth-related variables, site descriptors, etc.).
+- **Columns 1…(n-1)**: input features (Normalised acceleration, Normalised velocity, Penetration depth, Penetrometer mass)
 - **Last column**: target variable to be predicted (e.g. quasi-static tip resistance or another interpreted geotechnical parameter).
 
 
