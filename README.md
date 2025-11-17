@@ -1,11 +1,31 @@
 # Probabilistic Models for Free-Fall Penetrometer (FFP) Interpretation
 
-This repository contains the code used to develop and compare several **deterministic and probabilistic models** for interpreting Free-Fall Penetrometer (FFP) data.  
-The models aim to predict geotechnical response parameters from FFP measurements and to **quantify prediction uncertainty** for engineering decision-making.
+## Overview
 
-The code was developed in the context of a journal paper on probabilistic FFP interpretation and is targeted at **geotechnical engineers and researchers**.
+This repository contains the full workflow for probabilistic and data-driven
+modelling of Free-Fall Penetrometer (FFP) data.
 
----
+### Bayesian Calibration of Semi-Empirical Models
+Bayesian inference with Markov Chain Monte Carlo (MCMC) is used to perform
+probabilistic calibration of commonly used semi-empirical FFP models:
+
+1. Semi-logarithmic model
+2. Power-law model
+3. Inverse hyperbolic sine model
+
+### Deterministic Neural Network Model
+A deterministic Multilayer Perceptron (MLP) is developed to estimate
+quasi-static tip resistance from raw FFP measurements, providing a more
+accurate alternative to existing empirical models.
+
+### Probabilistic Neural Network Models
+Three probabilistic MLP variants are implemented to quantify both aleatoric
+and epistemic uncertainties:
+
+1. Maximum-Likelihood MLP (MaxLike MLP)
+2. Maximum-Likelihood MLP with Monte Carlo Dropout (MaxLike MLP-MCD)
+3. Bayesian MLP with Variational Inference (BMLP-VI)
+
 
 ## Repository Structure
 
