@@ -67,7 +67,7 @@ Implements the **Maximum Likelihood MLP**, modelling aleatoric (data) uncertaint
 - Mean of tip resistance  
 - Input-dependent standard deviation (heteroscedastic noise)
 
-Uses a **Gaussian likelihood / NLL loss**, consistent with the probabilistic framework described in Section 2.4 of the paper.
+Uses a Gaussian likelihood / NLL loss
 
 ---
 
@@ -78,7 +78,6 @@ The notebook:
 - Applies dropout during both training and inference  
 - Runs multiple stochastic forward passes (e.g., 5,000 samples)  
 - Computes predictive mean, aleatoric SD, epistemic SD, and the full predictive credible interval  
-Reflects the methodology in Section 2.4.2.
 
 ---
 
