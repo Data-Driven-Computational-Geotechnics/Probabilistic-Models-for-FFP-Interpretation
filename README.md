@@ -15,8 +15,7 @@ probabilistic calibration of commonly used semi-empirical FFP models:
 
 ### 1.2. Deterministic Neural Network Model
 A deterministic Multilayer Perceptron (MLP) is developed to estimate
-quasi-static tip resistance from raw FFP measurements, providing a more
-accurate alternative to existing empirical models.
+quasi-static tip resistance from FFP measurements.
 
 ### 1.3. Probabilistic Neural Network Models
 Three probabilistic MLP variants are implemented to quantify both aleatoric
@@ -89,11 +88,9 @@ This model provides point predictions only, trained using Mean Squared Error (MS
 ---
 
 ### 3.3. MaxLike_MLP.ipynb
-Implements the **Maximum Likelihood MLP**, modelling aleatoric (data) uncertainty by predicting:
+Implements the **Maximum Likelihood MLP**, modelling aleatoric (data) uncertainty using a Gaussian likelihood / NLL loss by predicting:
 - Mean of tip resistance  
 - Input-dependent standard deviation (heteroscedastic noise)
-
-Uses a Gaussian likelihood / NLL loss
 
 ---
 
@@ -108,7 +105,7 @@ The notebook:
 ---
 
 ### 3.5. BNN_VI.ipynb
-Implements a **Bayesian Neural Network with Variational Inference (VI)** following the formulation in Section 2.4.3.
+Implements a **Bayesian Neural Network with Variational Inference (VI)**c.
 
 The notebook:
 - Defines prior distributions on weights/biases  
@@ -120,7 +117,7 @@ This model aligns with the “Bayes by Backprop” variational framework describ
 
 ## 4. Data
 
-All notebooks expect an input dataset in Excel format (e.g. `FFP_Data.xlsx`) containing FFP measurements and target geotechnical response(s).
+All notebooks expect an input dataset in Excel format (e.g. `FFP_Data.xlsx`) containing FFP measurements and quasi-static tip resistance.
 
 A typical structure is:
 
