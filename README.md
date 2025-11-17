@@ -33,7 +33,7 @@ The repository is organised according to the modelling approaches used in the st
 Bayesian inference of semi-empirical strain-rate formulations and deterministic/probabilistic
 neural network models for estimating quasi-static tip resistance from FFP data.
 
-Each Jupyter notebook (`.ipynb`) is self-contained and can be executed in **Google Colab** or run locally.
+Each Jupyter notebook (`.ipynb`) is self-contained and can be executed in Google Colab or run locally.
 
 ---
 
@@ -45,7 +45,7 @@ Implements Bayesian inference for calibrating the three strain-rate correction m
 
 The notebook:
 - Defines the likelihood function and priors  
-- Uses **Metropolis–Hastings MCMC** to sample posterior distributions  
+- Uses Metropolis–Hastings MCMC to sample posterior distributions  
 - Computes posterior predictive distributions of quasi-static tip resistance  
 - Reproduces uncertainty quantification results (e.g., SRC, Cd, σ, posterior density plots)
 
@@ -58,7 +58,7 @@ Implements the baseline feed-forward neural network (MLP) used to estimate quasi
 - Penetration depth  
 - Penetrometer mass
 
-This model provides **point predictions only**, trained using Mean Squared Error (MSE), and serves as the deterministic benchmark.
+This model provides point predictions only, trained using Mean Squared Error (MSE), and serves as the deterministic benchmark.
 
 ---
 
