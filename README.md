@@ -1,11 +1,11 @@
 # Probabilistic Models for Free-Fall Penetrometer (FFP) Interpretation
 
-## Overview
+## 1. Overview
 
 This repository contains the full workflow for probabilistic and data-driven
 modelling of Free-Fall Penetrometer (FFP) data.
 
-### Bayesian Calibration of Semi-Empirical Models
+### 1.1. Bayesian Calibration of Semi-Empirical Models
 Bayesian inference with Markov Chain Monte Carlo (MCMC) is used to perform
 probabilistic calibration of commonly used semi-empirical FFP models:
 
@@ -13,12 +13,12 @@ probabilistic calibration of commonly used semi-empirical FFP models:
 2. Power-law model
 3. Inverse hyperbolic sine model
 
-### Deterministic Neural Network Model
+### 1.2. Deterministic Neural Network Model
 A deterministic Multilayer Perceptron (MLP) is developed to estimate
 quasi-static tip resistance from raw FFP measurements, providing a more
 accurate alternative to existing empirical models.
 
-### Probabilistic Neural Network Models
+### 1.3. Probabilistic Neural Network Models
 Three probabilistic MLP variants are implemented to quantify both aleatoric
 and epistemic uncertainties:
 
@@ -27,7 +27,7 @@ and epistemic uncertainties:
 3. Bayesian MLP with Variational Inference (BMLP-VI)
 
 
-## Repository Structure
+## 2. Repository Structure
 
 The repository is organised according to the modelling approaches used in the study, including
 Bayesian inference of semi-empirical strain-rate formulations and deterministic/probabilistic
@@ -37,7 +37,7 @@ Each Jupyter notebook (`.ipynb`) is self-contained and can be executed in Google
 
 ---
 
-### 📘 BayesianInference_MCMC.ipynb
+### 2.1. BayesianInference_MCMC.ipynb
 Implements Bayesian inference for calibrating the three strain-rate correction models:
 - Semi-logarithmic (Dayal & Allen, 1973)
 - Power-law (True, 1976)
@@ -51,7 +51,7 @@ The notebook:
 
 ---
 
-### 📘 Deterministic_MLP.ipynb
+### 2.2. Deterministic_MLP.ipynb
 Implements the baseline feed-forward neural network (MLP) used to estimate quasi-static tip resistance from:
 - Normalised acceleration  
 - Normalised velocity  
@@ -62,7 +62,7 @@ This model provides point predictions only, trained using Mean Squared Error (MS
 
 ---
 
-### 📘 MaxLike_MLP.ipynb
+### 2.3. MaxLike_MLP.ipynb
 Implements the **Maximum Likelihood MLP**, modelling aleatoric (data) uncertainty by predicting:
 - Mean of tip resistance  
 - Input-dependent standard deviation (heteroscedastic noise)
@@ -71,7 +71,7 @@ Uses a **Gaussian likelihood / NLL loss**, consistent with the probabilistic fra
 
 ---
 
-### 📘 MaxLike_MLP_MCD.ipynb
+### 2.4. MaxLike_MLP_MCD.ipynb
 Extends MaxLike MLP with **Monte Carlo Dropout (MCD)** to capture epistemic uncertainty in addition to aleatoric uncertainty.
 
 The notebook:
@@ -82,7 +82,7 @@ Reflects the methodology in Section 2.4.2.
 
 ---
 
-### 📘 BNN_VI.ipynb
+### 2.5. BNN_VI.ipynb
 Implements a **Bayesian Neural Network with Variational Inference (VI)** following the formulation in Section 2.4.3.
 
 The notebook:
